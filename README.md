@@ -70,6 +70,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## Credits
 
 - [Freek Van der Herten](https://github.com/freekmurze)
+- [Tim Van Dijck](https://github.com/timvandijck)
 - [All Contributors](../../contributors)
 
 ## License
