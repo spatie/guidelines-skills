@@ -1,8 +1,5 @@
 # Spatie Guidelines
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/guidelines-skills.svg?style=flat-square)](https://packagist.org/packages/spatie/guidelines-skills)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/guidelines-skills.svg?style=flat-square)](https://packagist.org/packages/spatie/guidelines-skills)
-
 Spatie's battle-tested coding guidelines as AI skills, compatible with [Laravel Boost](https://laravel.com/docs/12.x/boost) and [skills.sh](https://skills.sh).
 
 ## Installation
