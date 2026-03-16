@@ -1,0 +1,41 @@
+{
+    "name": "spatie/guidelines-skills",
+    "description": "Spatie's coding guidelines as AI skills for Laravel Boost and skills.sh",
+    "keywords": [
+        "laravel",
+        "boost",
+        "guidelines",
+        "coding-standards",
+        "spatie",
+        "skills",
+        "ai"
+    ],
+    "homepage": "https://github.com/spatie/guidelines-skills",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
+            "homepage": "https://spatie.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spatie\\Guidelines\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spatie\\Guidelines\\GuidelinesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
