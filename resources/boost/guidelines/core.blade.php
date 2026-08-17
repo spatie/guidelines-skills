@@ -11,4 +11,4 @@
 - Always activate the `spatie-laravel-php` skill when writing, editing, reviewing, or formatting Laravel or PHP code.
 - Always activate the `spatie-javascript` skill when writing, editing, reviewing, or formatting JavaScript or TypeScript code.
 - Always activate the `spatie-version-control` skill when creating commits, branches, or managing Git operations.
-- Always activate the `spatie-security` skill when configuring security, reviewing authentication, or setting up servers and databases.
+- Always activate the `spatie-security` skill when configuring security, signing commits, reviewing authentication, or setting up servers and databases.
