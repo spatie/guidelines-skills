@@ -20,99 +20,19 @@ Apply Spatie's Git and version control conventions for consistent repository man
 - In scope: Git operations, repository naming, branch naming, commit messages, merge strategies.
 - Out of scope: Code style, deployment pipelines, CI/CD configuration.
 
-## Repository Naming
+## Workflow
+1. Identify the Git operation or repository convention involved.
+2. Read `references/spatie-version-control-guidelines.md` and focus on the relevant sections.
+3. Apply the project-stage rules before branch, commit, merge, or cleanup guidance.
 
-### Site source code
-Use the main domain name in lowercase, without `www`:
-- Good: `spatie.be`
-- Bad: `https://www.spatie.be`, `www.spatie.be`, `Spatie.be`
+## Core Rules (Summary)
+- Name site repositories after their lowercase naked domain and other repositories with kebab-case.
+- Keep `main` stable and deployable after launch, and remove stale branches.
+- Use `develop` during initial development; use feature branches once a project is live.
+- Use only lowercase letters and hyphens in branch names.
+- Write descriptive, present-tense, granular commits.
+- Rebase regularly and generally squash feature branches when merging.
+- Treat history-rewriting and destructive Git commands with the cautions in the reference.
 
-### Subdomains
-Include the subdomain in the repo name:
-- Good: `guidelines.spatie.be`
-- Bad: `spatie.be-guidelines`
-
-### Packages and other projects
-Use kebab-case:
-- Good: `laravel-backup`, `spoon`
-- Bad: `LaravelBackup`, `Spoon`
-
-## Branches
-
-- Once a project is live, keep `main` stable and deployable at all times.
-- Treat all branches as active and clean up stale branches.
-
-### Initial development
-- Maintain `main` and `develop` branches.
-- Commit through `develop`, not directly to `main`.
-- Feature branches are optional; if used, branch from `develop`.
-
-### Live projects
-- Delete the `develop` branch.
-- All commits to `main` must come through feature branches.
-- Prefer squashing commits on merge.
-
-### Branch naming
-- Use lowercase letters and hyphens only.
-- Good: `feature-mailchimp`, `fix-deliverycosts`, `updates-june-2016`
-- Bad: `feature/mailchimp`, `random-things`, `develop`
-
-## Commits
-
-### Message format
-- Descriptive messages are recommended during initial development and required after launch.
-- Always use **present tense**.
-- Good: `Update deps`, `Fix vat calculation in delivery costs`
-- Bad: `wip`, `commit`, `a lot`, `solid`
-
-### Granularity
-- Prefer small, focused commits over large ones.
-- Use `git add -p` for interactive staging to create granular commits.
-
-## Merging
-- Rebase regularly to reduce merge conflicts.
-- For deploying feature branches: use `git merge <branch> --squash`.
-- If push is denied: use `git rebase` (not merge).
-
-## Pull Requests
-- Optional but useful for peer review, merge validation, and historical reference.
-
-## Git Tips
-
-### Split changes into granular commits
-Use `git add -p` to interactively select the chunks to stage.
-
-### Move local commits to a new branch
-Create the new branch before resetting and checking it out. Do not do this to pushed commits without first checking with collaborators.
-
-```bash
-git branch my-branch
-git reset --hard HEAD~3 # OR git reset --hard <commit>
-git checkout my-branch
-```
-
-### Squash commits that are already pushed
-Only do this when nobody else has pushed changes during those commits. Copy the SHA immediately before the commits to squash, then:
-
-```bash
-git reset --soft <commit>
-git commit -m "your new message"
-git push --force
-```
-
-### Clean up local branches
-Prune branches that no longer exist upstream. Use `--dry-run` first if there is any doubt.
-
-```bash
-git remote prune origin --dry-run
-git remote prune origin
-```
-
-## Resources
-- [GitHub Flow](https://guides.github.com/introduction/flow/)
-- [Merge vs. rebase on Atlassian](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/workflow-walkthrough)
-- [Merge vs. rebase by @porteneuve](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa)
-
----
-
-Source: https://spatie.be/guidelines/version-control
+## References
+- `references/spatie-version-control-guidelines.md`
