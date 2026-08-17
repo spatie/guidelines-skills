@@ -14,10 +14,10 @@ Apply Spatie's JavaScript coding standards to keep JS/TS code consistent and rea
 ## When to Activate
 - Activate this skill for any JavaScript or TypeScript coding work.
 - Activate this skill when working on `.js`, `.ts`, `.jsx`, `.tsx`, or `.vue` files.
-- Activate this skill when configuring Prettier or ESLint for a project.
+- Activate this skill when configuring Prettier for a project.
 
 ## Scope
-- In scope: JavaScript, TypeScript, Vue single-file components, Prettier/ESLint configuration.
+- In scope: JavaScript, TypeScript, Vue single-file components, Prettier configuration.
 - Out of scope: PHP, Laravel, CSS-only files, server configuration.
 
 ## Prettier Configuration
@@ -31,8 +31,8 @@ Apply Spatie's JavaScript coding standards to keep JS/TS code consistent and rea
 - Reassigning object properties is fine with `const` — the reference is not reassigned.
 
 ## Variable Names
-- Don't abbreviate variable names in multi-line functions. Use full, descriptive names.
-- Exception: single-line arrow functions where context is obvious.
+- Don't abbreviate variable names. Use full, descriptive names.
+- Exception: abbreviations are allowed in single-line arrow functions where the context is obvious.
 
 ```javascript
 // Good — full names in multi-line functions
@@ -66,6 +66,7 @@ if (number === 5) {
 - Use for anonymous callbacks.
 - Use in higher-order functions when it improves readability.
 - Don't use arrow functions when you need `this` context (e.g., jQuery event handlers).
+- Keep functions pure and limit the use of `this`.
 
 ### Object Methods
 - Use shorthand method syntax:

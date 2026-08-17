@@ -1,17 +1,18 @@
 # Spatie Guidelines
 
-Spatie's battle-tested coding guidelines as AI skills, compatible with [Laravel Boost](https://laravel.com/docs/12.x/boost) and [skills.sh](https://skills.sh).
+Spatie's battle-tested coding guidelines as AI skills, compatible with [Laravel Boost](https://laravel.com/docs/13.x/boost) and [skills.sh](https://skills.sh).
 
 ## Installation
 
 ### Via Laravel Boost (Composer)
 
 ```bash
+composer require laravel/boost --dev
 composer require spatie/guidelines-skills --dev
 php artisan boost:install
 ```
 
-Select the Spatie guidelines from the list and they'll be installed automatically.
+Select the Spatie guidelines and the coding agents you want to install Boost for from the prompts.
 
 ### Via skills.sh
 

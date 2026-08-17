@@ -1,6 +1,6 @@
 ---
 name: spatie-security
-description: Apply Spatie's security guidelines when configuring applications, databases, or servers, or when reviewing code for security concerns; use for SSL setup, CSRF protection, password hashing, database permissions, and server hardening.
+description: Apply Spatie's security guidelines when configuring applications, databases, servers, credentials, or signed Git commits, or when reviewing code for security concerns; use for SSL setup, CSRF protection, password hashing, database permissions, and server hardening.
 license: MIT
 metadata:
   author: Spatie
@@ -16,10 +16,15 @@ Apply Spatie's security best practices when building, configuring, or reviewing 
 - Activate this skill when setting up or reviewing database configurations.
 - Activate this skill when configuring servers or reviewing infrastructure.
 - Activate this skill when reviewing code for security vulnerabilities.
+- Activate this skill when configuring or creating signed Git commits.
 
 ## Scope
-- In scope: Application security, database security, server configuration, credential management.
+- In scope: Application security, database security, server configuration, credential management, signed Git commits.
 - Out of scope: Code style, business logic, UI/UX design.
+
+## GitHub
+- Sign all commits.
+- Follow [GitHub's commit-signing instructions](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits); signing can be configured through [1Password](https://blog.1password.com/git-commit-signing/).
 
 ## Application Security
 - Transmit all HTTP traffic over SSL.
@@ -49,8 +54,10 @@ Apply Spatie's security best practices when building, configuring, or reviewing 
 ## General
 - Use backups (e.g. BackBlaze) and test them periodically.
 - Enable FileVault (full-disk encryption) on all Macs.
-- Never use public services like Pastebin for sensitive code or data.
-- Install browser extensions only from official stores; minimize usage.
+- Never use public searchable services like Pastebin or Gist for sensitive code or data.
+- Never install pirated software on a computer or phone.
+- Install browser extensions only from the Chrome Web Store or App Store, keep them to a minimum, and account for ownership changes or malicious takeovers.
+- Never use browser extensions that can track typed keys, passwords, or browser history; the 1Password browser extension is allowed.
 
 ---
 
